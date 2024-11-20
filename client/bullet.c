@@ -16,6 +16,36 @@ void shoot_bullet(int x, int y, int direction) {
     }
 }
 
+// void shoot_bullet(int x, int y, int direction, int player_width) {
+//     if (bullet_count < MAX_BULLETS) {
+//         Bullet *b = &bullets[bullet_count++];
+        
+//         // 플레이어 길이를 고려한 총알 시작 위치 조정
+//         switch (direction) {
+//             case 0: // 위
+//                 b->x = x + player_width / 2;
+//                 b->y = y - 1;
+//                 break;
+//             case 1: // 오른쪽
+//                 b->x = x + player_width;
+//                 b->y = y + player_width / 2;
+//                 break;
+//             case 2: // 아래
+//                 b->x = x + player_width / 2;
+//                 b->y = y + player_width;
+//                 break;
+//             case 3: // 왼쪽
+//                 b->x = x - 1;
+//                 b->y = y + player_width / 2;
+//                 break;
+//         }
+        
+//         b->dx = (direction == 1) - (direction == 3);
+//         b->dy = (direction == 2) - (direction == 0);
+//     }
+// }
+
+
 // 발사된 총알 이동
 void move_bullets() {
     for (int i = 0; i < bullet_count; i++) {
