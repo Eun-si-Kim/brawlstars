@@ -40,4 +40,3 @@ PlayerShape* get_player_shape() {
     // 플레이어 모양 데이터를 변환
     return &player;
 }
-

@@ -82,7 +82,8 @@ void init_game(int sd, int client_num) {
 
         // 총알 발사
         if (ch == '\n') {
-            shoot_bullet(x, y, player_dir);
+            wchar_t *current_player_shape = player_shapes->shapes[current_shape];
+            shoot_bullet(x, y, player_dir, current_player_shape);
             play_shoot_sound();
         }
 
